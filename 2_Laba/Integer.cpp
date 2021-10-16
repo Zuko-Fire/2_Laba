@@ -41,7 +41,7 @@ void Integer::division()
 	}
 	catch(int exception)
 	{
-		cout << "Attention! There was an exception number: " << exception;
+		cout << "Attention! There was an exception number: " << exception <<endl;
 	}
 }
 int Integer::summation(int num1, int num2)
@@ -67,6 +67,6 @@ int Integer::division(int num1, int num2)
 	}
 	catch (int exception)
 	{
-		cout << "Attention! There was an exception number: " << exception;
+		cout << "Attention! There was an exception number: " << exception << endl;
 	}
 }
