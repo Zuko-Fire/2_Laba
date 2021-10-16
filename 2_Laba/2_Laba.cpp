@@ -34,24 +34,43 @@ int main()
                 switch (i)
                 {
                 case(1):
-                {
-                    decimal.summation();
+                {   int num1, num2;
+                    cout << "Введите первое число" << endl;
+                    cin >> num1;
+                    cout << "Введите второе число" << endl;
+                    cin >> num2;
+                    cout << decimal.summation(num1, num2) << endl;
                     break;
 
                 }
                 case(2):
                 {
-                    decimal.subtraction();
+                    int num1, num2;
+                    cout << "Введите первое число" << endl;
+                    cin >> num1;
+                    cout << "Введите второе число" << endl;
+                    cin >> num2;
+                    cout << decimal.subtraction(num1, num2) << endl;
                     break;
                 }
                 case(3):
                 {
-                    decimal.multiplication();
+                    int num1, num2;
+                    cout << "Введите первое число" << endl;
+                    cin >> num1;
+                    cout << "Введите второе число" << endl;
+                    cin >> num2;
+                    cout << decimal.multiplication(num1, num2) << endl;
                     break;
                 }
                 case(4):
                 {
-                    decimal.division();
+                    int num1, num2;
+                    cout << "Введите первое число" << endl;
+                    cin >> num1;
+                    cout << "Введите второе число" << endl;
+                    cin >> num2;
+                    cout << decimal.division(num1, num2) << endl;
                     break;
                 }
                 case(5):
