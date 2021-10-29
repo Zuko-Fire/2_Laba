@@ -25,49 +25,13 @@ int Binary::toDecimal(string binary)
 	}
 	return(num);
 }
-	void Binary::input()
+Integer Binary::operator+(Integer&obj)
+{
+	for (int i = std::min(this->num.length(), obj.output().length()) - 1; i > -1;i--) 
 	{
-		string num1, num2;
-		this->num1 = 0;
-		this->num2 = 0;
-		cout << "Please enter the first numbker" << endl;
-		cin >> num1;
-		cout << "Please enter the second number" << endl;
-		cin >> num2;
-		this->num1 = toDecimal(num1);
-		this->num2 = toDecimal(num2);
-	}
-	void Binary::output(int result)
-	{
-		cout << result << endl;
-		string result1,result2;
-		while(true)
+		if(this ->num.at(i) == 1 and obj.output().at(i) == 1 )
 		{
-			if ((result % 2) != 0)
-			{
-				result1 += "1";
-			}
-			else
-			{
-				result1 += "0";
-			}
-			result = result / 2;
-			if (result == 1)
-				break;
-			if (result == 0)
-				break;
-		}
-		result1 +="1";
-		for (int i = result1.length() - 1; i>= 0;i--)
-		{
-			result2 += result1.at(i);
-		}
-		cout << result2 << endl;
-		cout << "1.convert to decimal" << endl;
-		int i = 0;
-		cin >> i;
-		if (i == 1)
-		{
-			cout << toDecimal(result2) << endl;
+			
 		}
 	}
+}

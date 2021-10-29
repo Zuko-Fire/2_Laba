@@ -1,18 +1,20 @@
 #pragma once
 #include <string>
 using std::string;
-class Integer
+class Integer 
 {
 protected:
 	string num = "0";
 public:
 	Integer(string num);
 	void input_num(string num);
-	Integer operator + (Integer& obj);
-	Integer operator - (Integer& obj);
-	Integer operator * (Integer& obj);
-	Integer operator / (Integer& obj);
-	void output();
+	virtual Integer operator + (Integer& obj);
+	virtual Integer operator - (Integer& obj);
+	virtual Integer operator * (Integer& obj);
+	virtual Integer operator / (Integer& obj);
+	string output();
+
+
 
 };
 
