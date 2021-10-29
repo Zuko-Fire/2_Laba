@@ -11,8 +11,7 @@ using std::string;
 int main()
 {
     system("chcp 1251");
-    Binary binary;
-    Decimal decimal;
+
     while (true)
     {
         int i;

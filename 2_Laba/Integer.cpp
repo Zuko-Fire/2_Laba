@@ -1,72 +1,43 @@
-#include <iostream>
 #include "Integer.h"
-using std::cout;
-using std::endl;
-using std::cin;
-void Integer::input()
+#include <string>
+#include <iostream>
+using std::string;
+Integer::Integer(string num)
 {
-	cout << "Please enter the first number" << endl;
-	cin >> this->num1;
-	cout << "Please enter the second number" << endl;
-	cin >> this->num2;
+	this->num = num;
 }
-void Integer::output(int result)
+void Integer::input_num(string num)
 {
-	cout << result << endl;
-	this->num1 = 0;
-	this->num2 = 0;
+	this->num = num;
 }
-void Integer::summation()
+Integer Integer::operator+(Integer& obj)
 {
-	input();
-	output(num1 + num2);
+	string result;
+	result = std::stoi (this->num) + std::stoi(obj.num);
+	return result;
 }
-void Integer::subtraction()
+Integer Integer::operator-(Integer& obj)
 {
-	input();
-	output(num1 - num2);
+	string result;
+	result = std::stoi(this->num) - std::stoi(obj.num);
+	return result;
 }
-void Integer::multiplication()
+Integer Integer::operator*(Integer& obj)
 {
-	input();
-	output(num1 * num2);
+	string result;
+	result = std::stoi(this->num) * std::stoi(obj.num);
+	return result;
 }
-void Integer::division()
+Integer Integer::operator /(Integer& obj)
 {
-	input();
-	try
-	{
-		if (num2 == 0)throw 1;
-		output(num1 / num2);
-	}
-	catch(int exception)
-	{
-		cout << "Attention! There was an exception number: " << exception <<endl;
-	}
-}
-int Integer::summation(int num1, int num2)
-{
-	return (num1 + num2);
-}
-int Integer::subtraction(int num1, int num2)
-{
-	
-	return (num1 - num2);
-}
-int Integer::multiplication(int num1, int num2)
-{
-	return (num1 * num2);
-}
-int Integer::division(int num1, int num2)
-{
-	
-	try
-	{
-		if (num2 == 0)throw 1;
-		return(num1 / num2);
-	}
-	catch (int exception)
-	{
-		cout << "Attention! There was an exception number: " << exception << endl;
-	}
+	string result;
+	try {
+		if (std::stoi(obj.num) == 0)throw 1;
+		result = std::stoi(this->num) / std::stoi(obj.num);
+		return result;
+		}
+		catch(int excep)
+		{
+			std::cout << "Exception: " << excep << std::endl;
+		}
 }
