@@ -4,6 +4,7 @@
 using std::string;
 class Binary: public Integer/*Реализация наследования класса Integer классом Binary*/
 {
+	Binary(string num);
 	Integer operator+ (Integer& obj)override;
 	Integer operator- (Integer& obj)override;
 	Integer operator* (Integer& obj)override;

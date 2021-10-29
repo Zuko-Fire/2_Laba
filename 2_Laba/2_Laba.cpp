@@ -11,8 +11,8 @@ using std::string;
 int main()
 {
     system("chcp 1251");
-
-    while (true)
+    Binary b = new Binary("101")
+    /*while (true)
     {
         int i;
         cout << "Выберите систему счисления" << endl;
@@ -140,6 +140,6 @@ int main()
             }
         }
 
-    }
+    }*/
  
 }

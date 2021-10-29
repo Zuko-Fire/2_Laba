@@ -3,6 +3,9 @@
 #include <iostream>
 #include <string>
 #include<cmath>
+#include <bit>
+
+using std::stoi;
 using std::cout;
 using std::cin;
 using std::endl;
@@ -26,12 +29,14 @@ int Binary::toDecimal(string binary)
 	return(num);
 }
 Integer Binary::operator+(Integer&obj)
-{
-	for (int i = std::min(this->num.length(), obj.output().length()) - 1; i > -1;i--) 
-	{
-		if(this ->num.at(i) == 1 and obj.output().at(i) == 1 )
-		{
-			
-		}
-	}
+{	
+	
+	int bin1(0); 
+	int bin2 (0);
+	bin1 = stoi("0b" + this->num);
+	bin2 = stoi("0b" + obj.output());
+	int resualt(0);
+	resualt = bin1 + bin2;
+	return std::to_string(resualt);
+	
 }

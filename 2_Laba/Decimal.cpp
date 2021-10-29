@@ -1,5 +1,2 @@
 #include "Decimal.h"
 
-{
-	
-}
