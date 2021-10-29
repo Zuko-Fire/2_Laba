@@ -9,9 +9,14 @@ using std::endl;
 using std::cin;
 using std::string;
 int main()
-{
-    system("chcp 1251");
-    Binary b = new Binary("101")
+{system("chcp 1251");
+    Binary b("101");
+    Binary a("001");
+    Binary result("000");
+     a+b
+    
+    
+    
     /*while (true)
     {
         int i;

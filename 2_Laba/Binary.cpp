@@ -28,6 +28,17 @@ int Binary::toDecimal(string binary)
 	}
 	return(num);
 }
+Binary::Binary(string num)
+	: Integer(num){}
+Binary::Binary(Binary& obj)
+	:Integer(obj.num)
+{
+	
+}
+void Binary::input_num(Integer& obj)
+{
+	this->num = obj.output();
+}
 Integer Binary::operator+(Integer&obj)
 {	
 	
@@ -35,8 +46,8 @@ Integer Binary::operator+(Integer&obj)
 	int bin2 (0);
 	bin1 = stoi("0b" + this->num);
 	bin2 = stoi("0b" + obj.output());
-	int resualt(0);
-	resualt = bin1 + bin2;
-	return std::to_string(resualt);
+	Integer resualt("0");
+	resualt.input_num(std::to_string( bin1 + bin2));
+	return resualt;
 	
 }
